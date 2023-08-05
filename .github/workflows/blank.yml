@@ -27,22 +27,22 @@ jobs:
       
       - name: Terraform Init
         id: init
-        run: terraform -chdir=./staging init
+        run: terraform -chdir=./ init
 
       - name: Terraform Format
         id: fmt
-        run: terraform -chdir=./staging fmt -recursive -check
+        run: terraform -chdir=./ fmt -recursive -check
 
       - name: Terraform Validate
         id: validate
-        run: terraform -chdir=./staging validate -no-color
+        run: terraform -chdir=./ validate -no-color
 
       - name: Terraform Plan
         id: plan
-        run: terraform -chdir=./staging plan 
+        run: terraform -chdir=./ plan 
        
 
       - name: Terraform Apply
         id: apply
-        run: terraform -chdir=./staging apply -auto-approve
+        run: terraform -chdir=./ apply -auto-approve
       
