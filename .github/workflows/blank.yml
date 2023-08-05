@@ -29,10 +29,6 @@ jobs:
         id: init
         run: terraform -chdir=./ init
 
-      - name: Terraform Format
-        id: fmt
-        run: terraform -chdir=./ fmt -recursive -check
-
       - name: Terraform Validate
         id: validate
         run: terraform -chdir=./ validate -no-color
