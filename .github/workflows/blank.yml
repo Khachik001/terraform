@@ -3,11 +3,11 @@ name: "My first CI"
 on: 
   push:
     branches: 
-      - staging
+      - main
 
 jobs:
-  deploy-terraform-staging:
-    name: "Plan & Deploy Terraform plan on Staging"
+  deploy-terraform:
+    name: "Plan & Deploy Terraform plan"
     runs-on: ubuntu-latest
     permissions:
       pull-requests: write
