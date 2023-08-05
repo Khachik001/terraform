@@ -3,6 +3,7 @@ terraform {
     bucket = "terraform-intern-ecr"
     key    = "intern/terraform.tfstate"
     region = "us-east-1"
+    encrypt = true
     dynamodb_table = "terraform-intern-ecr-s3"
   }
 }
