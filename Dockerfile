@@ -5,7 +5,7 @@ WORKDIR /usr/src/app
 RUN npm install
 RUN npm install express ejs
 
-COPY  . .
+COPY   ./brainscale-simple-app .
 
 EXPOSE 3000
 
