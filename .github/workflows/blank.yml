@@ -56,4 +56,8 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: us-east-1
       - name: test
-        run: ls -la
+        run: |
+          aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 548844171305.dkr.ecr.us-east-1.amazonaws.com
+          docker build -t private-example .
+          docker tag private-example:latest 548844171305.dkr.ecr.us-east-1.amazonaws.com/private-example:latest
+          docker push 548844171305.dkr.ecr.us-east-1.amazonaws.com/private-example:latest
