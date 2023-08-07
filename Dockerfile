@@ -1,6 +1,6 @@
 FROM node:14
 
-WORKDIR /usr/src/app
+WORKDIR /usr/src/
 
 RUN npm install
 RUN npm install express ejs
