@@ -62,8 +62,8 @@ jobs:
       - name: check
         run: docker images
       - name: tag
-        run: docker tag private-example:latest 548844171305.dkr.ecr.us-east-1.amazonaws.com/private-example:latest
+        run: docker tag private-example:latest 548844171305.dkr.ecr.us-east-1.amazonaws.com/private-example:1.0.0
       - name: push
-        run: docker push 548844171305.dkr.ecr.us-east-1.amazonaws.com/private-example:latest
+        run: docker push 548844171305.dkr.ecr.us-east-1.amazonaws.com/private-example:1.0.0
       - name: last
         run: docker images
